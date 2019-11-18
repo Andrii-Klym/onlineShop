@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    --main-color: white;
+    --additional-color: #7d8260;
+    background-color: black;
+}
+
+body {
+    max-width: 1500px;
+    margin: auto;
+}
+
+h1, h2, h3, p, div, nav, header, footer {
+    margin: 0;
+    padding: 0;
+}
+
+body header nav {
+    padding: 2%;
+}
+
+header nav .logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header nav .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+}
+
+body header nav ul.menu li {
+    min-width: 100px;
+}
+
+header a, p, h1 {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--main-color);
+    border: 1px solid transparent;
+}
+
+@media (min-width: 550px) {
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    header .logo {
+        margin-left: 20px;
+    }
+
+    header .menu {
+        margin-right: 20px;
+    }
+
+}
+
+p {
+    font-size: 100%;
+}
