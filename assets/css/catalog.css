@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
     font-family: 'Open Sans', sans-serif;
     --main-color: white;
     --additional-color: #7d8260;
-    background-color: black;
+    background-color: #27211e;
 }
 
 body {
@@ -64,4 +64,4 @@ header a, p, h1 {
 
 p {
     font-size: 100%;
-}
+} 

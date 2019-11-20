@@ -10,6 +10,7 @@
 body {
     max-width: 1500px;
     margin: auto;
+    background-color: #27211e;
 }
 
 h1, h2, h3, p, div, nav, header, footer {
@@ -59,15 +60,17 @@ header a, p, h1 {
     header .menu {
         margin-right: 20px;
     }
-
+    
 }
 
 header .banner {
     background-image: url(../images/header.png);
     background-position: center;
+    height: 600px;
     background-size: cover;
     display: flex;
-    min-height: 500px;
+    justify-content: flex-start
+
 }
 
 header .banner-items {
@@ -85,33 +88,134 @@ p {
     font-size: 100%;
 }
 
-main {
-    background-color: var(--additional-color);
-}
-
 .description {
     background-color: var(--additional-color);
     display: flex;
-    justify-content: center;
-    margin: 5%;
+    align-items: flex-start;
+    padding: 30px;
 }
 
-.description .text {
-    background-color: white;
+.text-description {
+    background-color: var(--main-color);
     color: var(--additional-color);
-    text-align: center;
 }
 
-.description .text p {
-    background-color: white;
+.description p{
     color: var(--additional-color);
+}
+
+
+.multi-carousel{overflow:hidden}
+.multi-carousel .carousel-control-prev,.multi-carousel .carousel-control-next{background:rgba(255,255,255,0.5);width:5%}
+.multi-carousel .carousel-inner{width:310%;left:-80%}
+.carousel-inner .carousel-item-right.active,.carousel-inner .carousel-item-next{transform:translateX(75%)}
+.carousel-inner .carousel-item-left.active,.carousel-inner .carousel-item-prev{transform:translateX(-75%)}
+.carousel-inner .carousel-item-right,.carousel-inner .carousel-item-left{transform:translateX(0)}
+.item-third{float:left;width:25%;background-size:cover;height:auto}
+.carousel-inner {padding: 30px;}
+
+.consultation {
+    background-color: #27211e;
+    min-height: 350px;
+}
+
+.consultation form {
+    margin-top: 40px;
+}
+
+.user-wrap {
     display: flex;
-    justify-content: stretch;
+    justify-content: space-around;
 }
 
-div.description {
-    margin: 20px;
-    padding: 50px;
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.consultation .user-name {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 48px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    padding-left: 10px;
+    
+}
+
+.consultation .user-email {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 48px;
+    width: 350px;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    padding-left: 10px;
+}
+
+.consultation .user-question {
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+    font-size: 15px;
+    font-weight: 300;
+    width: 550px;
+    min-height: 150px;
+    padding: 10px 10px;
+}
+
+.consultation .btn-submit {
+    display: block;
+    outline: none;
+    color: white;
+    background-color: #7d8260;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 15px 50px;
+    font-size: 15px;
+}
+
+.consultation h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #7d8260;
+    margin: 40px;
+}
+
+@media screen and (max-width:900px) {
+    .consultation h2 {
+        font-size: 30px;
+    }
+
+    .user-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultation .user-name {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-email {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .consultation .user-question {
+        width: 350px;
+    }
 }
 
 .end {
